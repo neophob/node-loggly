@@ -14,9 +14,11 @@
     "loggly"
   ],
   "dependencies": {
-    "request": "2.74.x",
     "timespan": "2.3.x",
     "json-stringify-safe": "5.0.x"
+  },
+  "peerDependencies": {
+    "request": "^2.74"
   },
   "devDependencies": {
     "common-style": "^3.1.0",

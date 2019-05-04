@@ -6,12 +6,8 @@
  *
  */
 
-var fs = require('fs'),
-    util = require('util'),
-    path = require('path'),
-    vows = require('vows'),
-    assert = require('assert'),
-    loggly = require('../lib/loggly');
+var util = require('util');
+var assert = require('assert');
 
 var helpers = exports;
 
@@ -30,7 +26,6 @@ helpers.loadConfig = function () {
     if (!helpers.validConfig(config)) {
       throw new Error(util.format('test/config.json: invalid data %j', config));
     }
-
     helpers.config = config || {};
     return helpers.config;
   }

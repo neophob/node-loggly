@@ -6,14 +6,11 @@
  *
  */
 
-var path = require('path'),
-    vows = require('vows'),
+var vows = require('vows'),
     assert = require('assert'),
     helpers = require('./helpers');
 
-var options = {},
-    testContext = {},
-    config = helpers.loadConfig(),
+var config = helpers.loadConfig(),
     loggly = require('../lib/loggly').createClient(config);
 
 vows.describe('node-loggly/customer').addBatch({

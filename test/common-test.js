@@ -6,8 +6,7 @@
  *
  */
 
-var path = require('path'),
-    vows = require('vows'),
+var vows = require('vows'),
     assert = require('assert'),
     common = require('../lib/loggly/common');
 

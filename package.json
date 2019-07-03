@@ -16,7 +16,8 @@
   "dependencies": {
     "request": "2.74.x",
     "timespan": "2.3.x",
-    "json-stringify-safe": "5.0.x"
+    "json-stringify-safe": "5.0.x",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "common-style": "^3.1.0",
@@ -25,10 +26,13 @@
   "main": "./lib/loggly",
   "scripts": {
     "pretest": "common lib/**/*.js lib/*.js test/helpers.js",
-    "test": "vows test/*-test.js --spec"
+    "test": "vows test/*-test.js --spec",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "license": "MIT",
   "engines": {
     "node": ">= 0.8.0"
-  }
+  },
+  "snyk": true
 }
